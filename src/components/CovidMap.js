@@ -82,9 +82,25 @@ class CovidMap extends Component {
               lat={point.coordinates.latitude}
               lng={point.coordinates.longitude}
               subTitle={point.province}
-              title={point.country}
+              title={point.county}
               confirmed={point.stats.confirmed}
               deaths={point.stats.deaths}
+            />
+          );
+        }
+      }
+    } else if (pointsLevel === "state") {
+      for (const state in pointsToRender) {
+        const point = pointsToRender[state];
+        if (MapUtils.isInBoundary(this.state.boundary, point.coordinates)) {
+          results.push(
+            <CaseCard
+              lat={point.coordinates.latitude}
+              lng={point.coordinates.longitude}
+              subTitle={point.country}
+              title={state}
+              confirmed={point.confirmed}
+              deaths={point.deaths}
             />
           );
         }

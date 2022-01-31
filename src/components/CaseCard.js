@@ -5,9 +5,9 @@ import Typography from "@mui/material/Typography";
 
 export default function CaseCard(props) {
   return (
-    <Card sx={{ minWidth: 275 }}>
+    <Card sx={{ minWidth: 200 }}>
       <CardContent>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
+        <Typography sx={{ fontSize: 12 }} color="text.secondary" gutterBottom>
           {props.subTitle}
         </Typography>
         <Typography variant="h5" component="div">
