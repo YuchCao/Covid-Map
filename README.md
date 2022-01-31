@@ -1,6 +1,10 @@
-# Author
+# Covid Map
+
+## Author
 
 Yuchen Cao
+
+v1.0 submit by 1/30/2022
 
 ## Details
 
